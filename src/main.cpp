@@ -16,7 +16,8 @@ int main()
         }
 
         window.clear();
-        window.draw(cvije);
+//        window.draw(cvije);
+        cvije.draw(window);
         window.display();
     }
 }

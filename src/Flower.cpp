@@ -30,7 +30,6 @@ void Flower::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(stabiljka);
     target.draw(sredina);
     target.draw(leaf);
-
 }
 
 sf::Vector2f Flower::getMiddleOfcircle() {
@@ -40,9 +39,39 @@ sf::Vector2f Flower::getMiddleOfcircle() {
     return s;
 }
 
-sf::Vector2f Flower::getMiddleOfStem() {
+sf::Vector2f Flower::getMiddleOfStem() const{
     auto s = stabiljka.getPosition();
     s.y += 55;
     s -= sf::Vector2f(10,0);
     return s;
+}
+
+void Flower::draw(sf::RenderWindow & w) {
+
+    sf::Transform t;
+    t.rotate(angle, getMiddleOfStem() + sf::Vector2f(0, 440));
+    w.draw(stabiljka, t);
+    w.draw(sredina, t);
+    w.draw(leaf, t);
+    if(frameClock.getElapsedTime().asMilliseconds() >= 100) {
+        wiggle();
+        frameClock.restart();
+    }
+}
+
+void Flower::wiggle() {
+    if(angle == -30) add = 1;
+    if(angle == 30) add = 0;
+
+    switch (add) {
+        case 1:
+            angle +=10;
+            break;
+        case 0:
+            angle -=10;
+            break;
+        default:
+            throw std::runtime_error("Otislo previse");
+            break;
+    }
 }
