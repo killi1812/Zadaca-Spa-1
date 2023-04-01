@@ -1,10 +1,14 @@
 #include <SFML/Graphics.hpp>
 #include "Flower.h"
+#include "Wind.h"
 int main()
 {
     auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
     window.setFramerateLimit(144);
+
     Flower cvijet(window);
+    Wind vjetar(window);
+
     cvijet.Move(150,150);
     while (window.isOpen())
     {
@@ -17,6 +21,7 @@ int main()
         }
 
         window.clear();
+        vjetar.draw();
         cvijet.draw();
         window.display();
     }

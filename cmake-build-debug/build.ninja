@@ -63,6 +63,13 @@ build CMakeFiles/CMakeSFMLProject.dir/src/Flower.cpp.o: CXX_COMPILER__CMakeSFMLP
   OBJECT_DIR = CMakeFiles/CMakeSFMLProject.dir
   OBJECT_FILE_DIR = CMakeFiles/CMakeSFMLProject.dir/src
 
+build CMakeFiles/CMakeSFMLProject.dir/src/Wind.cpp.o: CXX_COMPILER__CMakeSFMLProject_Debug /home/fran/Programi/CppProjects/Zadaca-Spa-1/src/Wind.cpp || cmake_object_order_depends_target_CMakeSFMLProject
+  DEP_FILE = CMakeFiles/CMakeSFMLProject.dir/src/Wind.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/fran/Programi/CppProjects/Zadaca-Spa-1/cmake-build-debug/_deps/sfml-src/include
+  OBJECT_DIR = CMakeFiles/CMakeSFMLProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/CMakeSFMLProject.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CMakeSFMLProject
@@ -71,7 +78,7 @@ build CMakeFiles/CMakeSFMLProject.dir/src/Flower.cpp.o: CXX_COMPILER__CMakeSFMLP
 #############################################
 # Link the executable CMakeSFMLProject
 
-build CMakeSFMLProject: CXX_EXECUTABLE_LINKER__CMakeSFMLProject_Debug CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o CMakeFiles/CMakeSFMLProject.dir/src/Flower.cpp.o | _deps/sfml-build/lib/libsfml-graphics-d.so.2.5.1 _deps/sfml-build/lib/libsfml-window-d.so.2.5.1 _deps/sfml-build/lib/libsfml-system-d.so.2.5.1 || _deps/sfml-build/lib/libsfml-graphics-d.so _deps/sfml-build/lib/libsfml-system-d.so _deps/sfml-build/lib/libsfml-window-d.so _deps/sfml-build/lib/libsfml-graphics-d.so _deps/sfml-build/lib/libsfml-window-d.so _deps/sfml-build/lib/libsfml-system-d.so
+build CMakeSFMLProject: CXX_EXECUTABLE_LINKER__CMakeSFMLProject_Debug CMakeFiles/CMakeSFMLProject.dir/src/main.cpp.o CMakeFiles/CMakeSFMLProject.dir/src/Flower.cpp.o CMakeFiles/CMakeSFMLProject.dir/src/Wind.cpp.o | _deps/sfml-build/lib/libsfml-graphics-d.so.2.5.1 _deps/sfml-build/lib/libsfml-window-d.so.2.5.1 _deps/sfml-build/lib/libsfml-system-d.so.2.5.1 || _deps/sfml-build/lib/libsfml-graphics-d.so _deps/sfml-build/lib/libsfml-system-d.so _deps/sfml-build/lib/libsfml-window-d.so _deps/sfml-build/lib/libsfml-graphics-d.so _deps/sfml-build/lib/libsfml-window-d.so _deps/sfml-build/lib/libsfml-system-d.so
   FLAGS = -g
   LINK_LIBRARIES = -Wl,-rpath,/home/fran/Programi/CppProjects/Zadaca-Spa-1/cmake-build-debug/_deps/sfml-build/lib:  _deps/sfml-build/lib/libsfml-graphics-d.so.2.5.1  _deps/sfml-build/lib/libsfml-window-d.so.2.5.1  _deps/sfml-build/lib/libsfml-system-d.so.2.5.1
   OBJECT_DIR = CMakeFiles/CMakeSFMLProject.dir
