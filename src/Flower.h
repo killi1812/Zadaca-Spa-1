@@ -6,22 +6,25 @@
 #define CMAKESFMLPROJECT_FLOWER_H
 
 #include <SFML/Graphics.hpp>
-class Flower : public sf::Drawable{
+class Flower{
 private:
     int add = 1;
     float angle = 0;
+
+    sf::Transform t;
     sf::Clock frameClock;
     sf::CircleShape sredina;
     sf::RectangleShape stabiljka;
     sf::ConvexShape leaf;
+    sf::RenderWindow* prozor;
 
     sf::Vector2f getMiddleOfcircle();
     sf::Vector2f getMiddleOfStem() const;
     void wiggle();
 public:
-    Flower();
-    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
-    void draw(sf::RenderWindow & w);
+    explicit Flower(sf::RenderWindow & w);
+    void draw();
+    void Move(float x, float y);
 };
 
 

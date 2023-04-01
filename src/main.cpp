@@ -4,7 +4,8 @@ int main()
 {
     auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
     window.setFramerateLimit(144);
-    Flower cvije;
+    Flower cvijet(window);
+    cvijet.Move(150,150);
     while (window.isOpen())
     {
         for (auto event = sf::Event{}; window.pollEvent(event);)
@@ -16,8 +17,7 @@ int main()
         }
 
         window.clear();
-//        window.draw(cvije);
-        cvije.draw(window);
+        cvijet.draw();
         window.display();
     }
 }
