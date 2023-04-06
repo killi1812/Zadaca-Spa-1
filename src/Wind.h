@@ -12,8 +12,8 @@ class Wind {
 private:
     sf::Clock frameClock;
     sf::RenderWindow* prozor;
-    sf::RectangleShape rectangle, whiteRectangle;
-    sf::Texture texture;
+    sf::RectangleShape rectangle, whiteRectangle, bacground;
+    sf::Texture texture, background;
     void loadTexture();
     void windAnimate();
 public:

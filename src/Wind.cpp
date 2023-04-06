@@ -7,7 +7,8 @@
 Wind::Wind(sf::RenderWindow &prozor) {
     this->prozor = &prozor;
     rectangle.setSize(sf::Vector2f(1920.f, 1080.f));
-    whiteRectangle.setSize(sf::Vector2f(500.f, 500.f));
+    bacground.setSize(sf::Vector2f(1920.f, 1080.f));
+    whiteRectangle.setSize(sf::Vector2f(500.f, 700.f));
     try {
         loadTexture();
     }
@@ -18,15 +19,19 @@ Wind::Wind(sf::RenderWindow &prozor) {
 
 
 void Wind::draw() {
+    prozor->draw(bacground);
     windAnimate();
     prozor->draw(rectangle);
 }
 
 void Wind::loadTexture() {
-    if (!texture.loadFromFile("Background.png"))
+    if (!texture.loadFromFile("Background.jpg"))
         throw std::exception();
-    rectangle.setTexture(&texture);
+    bacground.setTexture(&texture);
 
+    if (!background.loadFromFile("bgt.png"))
+        throw std::exception();
+    rectangle.setTexture(&background);
 }
 
 void Wind::windAnimate() {
