@@ -9,7 +9,7 @@ int main()
     Flower cvijet(window);
     Wind vjetar(window);
 
-    cvijet.Move(150,150);
+    cvijet.Move(600,300);
     while (window.isOpen())
     {
         for (auto event = sf::Event{}; window.pollEvent(event);)

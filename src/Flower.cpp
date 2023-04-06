@@ -43,7 +43,7 @@ sf::Vector2f Flower::getMiddleOfStem() const {
 }
 
 void Flower::draw() {
-    if (frameClock.getElapsedTime().asMilliseconds() >= 100) {
+    if (frameClock.getElapsedTime().asMilliseconds() >= 60) {
         wiggle();
         frameClock.restart();
     }
