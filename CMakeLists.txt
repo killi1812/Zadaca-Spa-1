@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(CMakeSFMLProject LANGUAGES CXX)
+project(SpaDomacaZadaca01 LANGUAGES CXX)
 
 include(FetchContent)
 FetchContent_Declare(SFML
@@ -7,12 +7,12 @@ FetchContent_Declare(SFML
     GIT_TAG 2.6.x)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(CMakeSFMLProject src/main.cpp src/Flower.cpp src/Flower.h src/Wind.cpp src/Wind.h)
-target_link_libraries(CMakeSFMLProject PRIVATE sfml-graphics)
-target_compile_features(CMakeSFMLProject PRIVATE cxx_std_17)
+add_executable(SpaDomacaZadaca01 src/main.cpp src/Flower.cpp src/Flower.h src/Wind.cpp src/Wind.h)
+target_link_libraries(SpaDomacaZadaca01 PRIVATE sfml-graphics)
+target_compile_features(SpaDomacaZadaca01 PRIVATE cxx_std_17)
 if (WIN32 AND BUILD_SHARED_LIBS)
-    add_custom_command(TARGET CMakeSFMLProject POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_RUNTIME_DLLS:CMakeSFMLProject> $<TARGET_FILE_DIR:CMakeSFMLProject> COMMAND_EXPAND_LISTS)
+    add_custom_command(TARGET SpaDomacaZadaca01 POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_RUNTIME_DLLS:SpaDomacaZadaca01> $<TARGET_FILE_DIR:SpaDomacaZadaca01> COMMAND_EXPAND_LISTS)
 endif()
 
-install(TARGETS CMakeSFMLProject)
+install(TARGETS SpaDomacaZadaca01)
