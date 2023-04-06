@@ -16,7 +16,7 @@ private:
     sf::Texture texture;
     void loadTexture();
 public:
-    Wind(sf::RenderWindow &prozor);
+    explicit Wind(sf::RenderWindow &prozor);
     void draw();
 };
 
