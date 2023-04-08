@@ -9,6 +9,7 @@ Wind::Wind(sf::RenderWindow &prozor) {
     rectangle.setSize(sf::Vector2f(1920.f, 1080.f));
     bacground.setSize(sf::Vector2f(1920.f, 1080.f));
     whiteRectangle.setSize(sf::Vector2f(500.f, 700.f));
+    whiteRectangle.setPosition(-500.f,0);
     try {
         loadTexture();
     }
@@ -39,7 +40,7 @@ void Wind::windAnimate() {
     if(frameClock.getElapsedTime().asMicroseconds() >= 2){
         whiteRectangle.move(8,0);
         if(whiteRectangle.getPosition().x > 1920){
-            whiteRectangle.setPosition(0.f,0);
+            whiteRectangle.setPosition(-500.f,0);
         }
         frameClock.restart();
     }
