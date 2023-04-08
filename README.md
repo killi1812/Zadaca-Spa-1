@@ -1,4 +1,4 @@
-# 1. Homwork for SPA (Data Structures and Algorithams)
+# 1. Homework for SPA (Data Structures and Algorithams)
 This is my animation for SPA
 I used [this](https://github.com/SFML/cmake-sfml-project) template to make my project.
 It will take a few minutes to download SFML when u first open the project
@@ -24,4 +24,3 @@ It will take a few minutes to download SFML when u first open the project
     cmake -S . -B build
     cmake --build build --config Release
     ```
-1. Enjoy!
